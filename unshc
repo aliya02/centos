@@ -1,0 +1,61 @@
+#!/bin/bash
+
+
+#============================================================================================================
+#	
+#	Welcome To 	UnSHC_decrypter
+#	UnSHC_decrypter By : Ari R. Abdulla
+#	=======================================
+#	My Facebook Account ::-
+#	http://facebook.com/AriR.Abdulla
+#	=======================================
+#	My Youtube Channel ::-
+#	https://www.youtube.com/channel/UCdigZ3N0EVMIEsS4hlIaaHg
+#
+#============================================================================================================
+
+
+#This colour
+b=$(tput sgr0)
+y=$(tput bold; tput setaf 3)
+r=$(tput bold; tput setaf 1)
+
+
+# UnSHC_decrypter
+echo ""
+echo "$y"
+echo "Welcome to UnSHc decrypter"
+sleep 1
+echo ""
+echo "UnSHc decrypter By : Ari R. Abdulla"
+sleep 1
+echo ""
+echo "Checking master.zip .."
+if [ ! -f "master.zip" ]; then
+echo "$r"
+echo "Not Found"
+echo ""
+echo "Wait for Downloading"
+sleep 2
+echo "$y"
+echo ""
+wget https://github.com/yanncam/UnSHc/archive/master.zip
+else
+echo "master.zip Found"
+echo ""
+fi
+echo "$r#############################"
+if [ -e "master.zip" ]; then
+unzip master.zip
+clear
+read -p "Type Your Script Name - " "a";
+cd UnSHc-master
+cd latest
+chmod 777 ./unshc.sh
+./unshc.sh $a
+mv $a.sh $a
+echo "$y"
+echo ""
+sleep 1
+echo "Success"
+fi
