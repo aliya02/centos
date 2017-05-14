@@ -1,0 +1,1 @@
+tar -xzvf nama_file.tar.gz
