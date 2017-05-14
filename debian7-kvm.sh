@@ -455,7 +455,7 @@ iptables-restore < /etc/iptables.up.rules
 
 # download script
 cd
-wget http://script.hostingtermurah.net/script/install-premiumscript.sh -O - -o /dev/null|sh
+wget "https://raw.githubusercontent.com/aliya02/centos/master/premiumscript.sh"
 
 # finalisasi
 apt-get -y autoremove
