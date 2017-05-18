@@ -455,11 +455,13 @@ iptables-restore < /etc/iptables.up.rules
 
 # download script
 cd
-wgethttps://raw.githubusercontent.com/aliya02/rania/master/installcode.sh
+wget https://raw.githubusercontent.com/aliya02/rania/master/installcode.sh
 chmod +x  installcode.sh
 bash installcode.sh
+clear
 
 # finalisasi
+cd
 apt-get -y autoremove
 chown -R www-data:www-data /home/vps/public_html
 service nginx start
