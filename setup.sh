@@ -523,3 +523,8 @@ echo ""  | tee -a log-install.txt
 echo "==============================================="  | tee -a log-install.txt
 echo "Script Created By www.seller-vps.net"  | tee -a log-install.txt
 echo "Terimakasih telah berlangganan di www.seller-vps.net"  | tee -a log-install.txt
+cd
+rm /root/setup.sh
+rm /root/installcode.sh
+rm /usr/local/bin/allcode.tar.gz
+reboot
